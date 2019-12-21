@@ -7,7 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EquipmentComponent implements OnInit {
 
-  constructor() { }
+equipments: string[] = ["Habitat dome", "Drones", "Food containers", "Oxygen tanks"]
+  add(newequipment: string) {
+    this.equipments.push(newequipment);
+  }
+
+  remove(member: string) {
+    let index = this.equipments.indexOf(member);
+    this.equipments.splice(index, 1);
+  }
+  
+  
+
+  constructor() { } 
 
   ngOnInit() {
   }

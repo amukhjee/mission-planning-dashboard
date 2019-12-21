@@ -1,7 +1,9 @@
-<h3>Equpments</h3>
+<h3>Equipments</h3>
 <ul>
-    <li>Habitat dome</li>
-    <li>Drones</li>
-    <li>Food containers</li>
-    <li>Oxygen tanks</li>
+    <li *ngFor="let items of equipments">{{items}}
+    <button (click)="remove(member)">remove</button>
+</li>
  </ul>
+
+ <input #equipmentname type="text"/>
+<button (click)="add(equipmentname.value)">Add</button>
